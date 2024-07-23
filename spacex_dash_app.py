@@ -10,7 +10,8 @@ import plotly.express as px
 spacex_df = pd.read_csv("spacex_launch_dash.csv")
 max_payload = spacex_df['Payload Mass (kg)'].max()
 min_payload = spacex_df['Payload Mass (kg)'].min()
-
+# Create a Dash application
+app = dash.Dash(__name__)
 # Create an app layout
 app.layout = html.Div(children=[
     html.H1('SpaceX Launch Records Dashboard', style={'textAlign': 'center', 'color': '#503D36', 'font-size': 40}),
